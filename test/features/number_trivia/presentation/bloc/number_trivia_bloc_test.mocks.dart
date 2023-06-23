@@ -58,14 +58,14 @@ class _FakeEither_1<L, R> extends _i1.SmartFake implements _i3.Either<L, R> {
 /// See the documentation for Mockito's code generation for more information.
 class MockGetConcreteNumberTrivia extends _i1.Mock
     implements _i4.GetConcreteNumberTrivia {
-  MockGetConcreteNumberTrivia() {
-    _i1.throwOnMissingStub(this);
-  }
-
   @override
   _i2.NumberTriviaRepository get repository => (super.noSuchMethod(
         Invocation.getter(#repository),
         returnValue: _FakeNumberTriviaRepository_0(
+          this,
+          Invocation.getter(#repository),
+        ),
+        returnValueForMissingStub: _FakeNumberTriviaRepository_0(
           this,
           Invocation.getter(#repository),
         ),
@@ -87,6 +87,15 @@ class MockGetConcreteNumberTrivia extends _i1.Mock
             [params],
           ),
         )),
+        returnValueForMissingStub:
+            _i5.Future<_i3.Either<_i6.Failure, _i7.NumberTrivia>>.value(
+                _FakeEither_1<_i6.Failure, _i7.NumberTrivia>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
       ) as _i5.Future<_i3.Either<_i6.Failure, _i7.NumberTrivia>>);
 }
 
@@ -95,14 +104,14 @@ class MockGetConcreteNumberTrivia extends _i1.Mock
 /// See the documentation for Mockito's code generation for more information.
 class MockGetRandomNumberTrivia extends _i1.Mock
     implements _i8.GetRandomNumberTrivia {
-  MockGetRandomNumberTrivia() {
-    _i1.throwOnMissingStub(this);
-  }
-
   @override
   _i2.NumberTriviaRepository get repository => (super.noSuchMethod(
         Invocation.getter(#repository),
         returnValue: _FakeNumberTriviaRepository_0(
+          this,
+          Invocation.getter(#repository),
+        ),
+        returnValueForMissingStub: _FakeNumberTriviaRepository_0(
           this,
           Invocation.getter(#repository),
         ),
@@ -124,6 +133,15 @@ class MockGetRandomNumberTrivia extends _i1.Mock
             [noParams],
           ),
         )),
+        returnValueForMissingStub:
+            _i5.Future<_i3.Either<_i6.Failure, _i7.NumberTrivia>>.value(
+                _FakeEither_1<_i6.Failure, _i7.NumberTrivia>(
+          this,
+          Invocation.method(
+            #call,
+            [noParams],
+          ),
+        )),
       ) as _i5.Future<_i3.Either<_i6.Failure, _i7.NumberTrivia>>);
 }
 
@@ -131,10 +149,6 @@ class MockGetRandomNumberTrivia extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockInputConverter extends _i1.Mock implements _i10.InputConverter {
-  MockInputConverter() {
-    _i1.throwOnMissingStub(this);
-  }
-
   @override
   _i3.Either<_i6.Failure, int> stringToUnsignedInteger(String? str) =>
       (super.noSuchMethod(
@@ -143,6 +157,13 @@ class MockInputConverter extends _i1.Mock implements _i10.InputConverter {
           [str],
         ),
         returnValue: _FakeEither_1<_i6.Failure, int>(
+          this,
+          Invocation.method(
+            #stringToUnsignedInteger,
+            [str],
+          ),
+        ),
+        returnValueForMissingStub: _FakeEither_1<_i6.Failure, int>(
           this,
           Invocation.method(
             #stringToUnsignedInteger,

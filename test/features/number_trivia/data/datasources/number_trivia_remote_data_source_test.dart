@@ -1,13 +1,11 @@
 import 'dart:convert';
-
-import 'package:flutter_tdd_clean_architecture/core/error/exceptions.dart';
-import 'package:flutter_tdd_clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:matcher/matcher.dart';
 
+import 'package:flutter_tdd_clean_architecture/core/error/exceptions.dart';
+import 'package:flutter_tdd_clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_tdd_clean_architecture/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import '../../../../fixtures/fixture_reader.dart';
 
@@ -126,7 +124,7 @@ void main() {
         // act
         final call = dataSource.getRandomNumberTrivia;
         // assert
-        expect(() => call(), throwsA(TypeMatcher<ServerException>()));
+        expect(() => call(), throwsA(const TypeMatcher<ServerException>()));
       },
     );
   });
